@@ -78,21 +78,6 @@ void getdirsizes(struct Node *node, size_t *size)
     }
 }
 
-// Return smallest directory that is large enough.
-size_t spam(Node *node, size_t size)
-{
-    size_t min = 0, current;
-    
-    for (int i = 0; i < node->nk; i++)
-        if (!node->kids[i]->size) // Is a directory.
-        {
-            current = getsize(node->kids[i]);
-            if ((current < min || !min) && current >= size)
-                min = current;
-        }
-    return min;
-}
-
 // Put minimum viable directory size in min.
 void getmin(Node *node, size_t *min, size_t size)
 {
