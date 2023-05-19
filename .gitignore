@@ -1,2 +1,6 @@
 *.txt
 *.out
+
+*.csproj
+bin/
+obj/
