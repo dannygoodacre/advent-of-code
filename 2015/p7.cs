@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
 namespace Day7;
 
 class Program
